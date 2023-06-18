@@ -389,8 +389,6 @@ body{
 	grid-template-rows: 1em 1fr 1em;
 	height: 100%;
 	/* border: 1px solid red; */
-	/* border-bottom-left-radius: .3em;
-	border-bottom-right-radius: .3em; */
 }
 
 .esquinaSuperiorIz{
@@ -412,7 +410,6 @@ body{
 	box-shadow: inset 0px .2em .1em #000;
 }
 
-
 .lateralIzquierdoPantalla{
 	grid-column: 1/2;
 	grid-row: 2/3;
@@ -433,23 +430,35 @@ body{
 	border-bottom-left-radius: .3em;
 	border-bottom-right-radius: .3em;
 	background: linear-gradient(#000, #62676b, #cfd3d6,#000, #000);
-	
 }
+
 
 #pantallaNegra{
 	background-color: #000;
 	grid-row: 2/3;
 	grid-column: 2/3;
+	/* border: 1px solid red; */
+	padding: 0 .3em .1em .3em;
 }
 
 #pantalla{
+	height: 100%;
+	border-radius: .3em;
+	box-shadow: inset .04em .08em .05em #232323, inset -.02em -.08em .05em #62676b;
+	padding: 1em 2em;
 }
 
-/* 480 768 1024 */
-/* @media (max-width: 1024px){
-	.container{
-		padding-left: 2%;
-		padding-right: 2%;
-		max-width: 96%;
-	}
-} */
+#pantallaColores{
+	height: 100%;
+	width: 100%;
+	/* background-color: red; */
+}
+#pantallaColores iframe{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+#pantallaColores video{
+	width: 100%;
+	height: 100%;
+}
