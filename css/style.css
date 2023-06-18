@@ -84,19 +84,44 @@ body{
 /* *************************************************************** */
 /* ************************* Botones */
 /* *************************************************************** */
+
+/* *********************************** Izquierda */
+#lateralIzquierdo #joystick{
+	position: absolute;
+	top: 4em;
+	left: 2.5em;
+}
+
+#botonesCruzIz{
+	position: absolute;
+	top: 11em;
+	left: 1.8em;
+}
+/* *********************************** Derecha */
+#lateralDerecho #joystick{
+	position: absolute;
+	top: 12em;
+	right: 2.5em;
+}
+
+#botonesCruzDer{
+	position: absolute;
+	top: 4em;
+	right: 1.8em;
+}
+
+/* *********************************** Joysticks */
 #joystick{
 	background-color: black;
 	border-radius: 100%;
 	width: 4em;
 	height: 4em;
-	position: absolute;
-	top: 4em;
-	left: 2.5em;
 	box-shadow: inset 0 0 .3em #fff;
 	
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 #joystickBoton{
@@ -113,19 +138,13 @@ body{
 	transform: translate(0, -0.3em);
 }
 
-/* ******************************** Botónes Cruz Redondos */
+/* ******************************** Botónes 4 Redondos */
 .botonesCruzContenedor{
 	width: 5.5em;
 	height: 5.5em;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
-}
-
-#botonesCruzIz{
-	position: absolute;
-	top: 11em;
-	left: 1.8em;
 }
 
 #flecha-1{
@@ -168,11 +187,13 @@ body{
     border-bottom: .3em solid transparent;
 }
 
-#botonesCruzDer{}
-#flecha-X{}
-#flecha-A{}
-#flecha-B{}
-#flecha-Y{}
+#botonesCruzDer p{
+	color: #f6f9fe;
+	padding: 0;
+	margin: 0;
+	font-size: .9em;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 /* ******************************** Botón Cuadrado */
 .fondoBotonCuadrado{
@@ -186,7 +207,8 @@ body{
 	left: 5.1em;
 	bottom: 6.5em;
 }
-.botonCuadrado{
+
+.fondoBotonCuadrado .boton{
 	border-radius: .2em;
 	display: flex;
 	justify-content: center;
@@ -208,6 +230,38 @@ body{
 	background-color: #2f3437;
 }
 
+/* ******************************** Boton HOME */
+.fondoBotonHome{
+	width: 1.8em;
+	height: 1.8em;
+	border-radius: 100%;
+	position: absolute;
+	right: 5.1em;
+	bottom: 6em;
+}
+
+.fondoBotonHome .boton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #888b92;
+	box-shadow: none;
+}
+
+.fondoBotonHome .circuloInteriorBtnCuadradoFondo{
+	width: 90%;
+	height: 90%;
+	box-shadow: none;
+}
+.fondoBotonHome .circuloInteriorBtnCuadrado{
+	background-color: #434343;
+
+	background-image: url(../images/Home-icon.svg);
+	background-size: 65%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 /* ******************************** Boton rectangular Iz */
 #botonRectangularIz{
 	width: 1.4em;
@@ -226,6 +280,38 @@ body{
 	border-radius: .1em;
 }
 
+/* ******************************** Boton X Der */
+#botonEquisDer{
+	width: 1.4em;
+	/* height: .5em; */
+	height: 1.4em;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	background-color: transparent;
+	box-shadow: none;
+	/* box-shadow:  0em 0em .2em #444849; */
+
+	position: absolute;
+	top: 2em;
+	left: .5em;
+}
+#botonEquisDer .porcion{
+	background-color: #2f3437;
+	width: 100%;
+	height: 100%;
+	border-radius: .1em;
+}
+#botonEquisDer .porcion-1{
+	grid-row: 1/4;
+	grid-column: 2/3;
+}
+#botonEquisDer .porcion-2{
+	grid-row: 2/3;
+	grid-column: 1/4;
+}
+
 /* ******************************** Botones genericos */
 .agujeroBoton{
 	background-color: black;
@@ -242,6 +328,7 @@ body{
 	box-shadow: inset 0 .1em .1em #727679, inset 0 -.1em .1em #151419;
 	height: 95%;
 	width: 95%;
+	cursor: pointer;
 }
 .boton:active{
 	transform: scale(90%);
